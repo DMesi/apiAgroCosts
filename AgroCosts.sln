@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StorageServiceLibrary", "StorageServiceLibrary\StorageServiceLibrary.csproj", "{23B9224C-9912-4EC0-AECD-2354855BB9B5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "apiAC", "apiAC\apiAC.csproj", "{EED16DA0-2CBD-47D3-8C7D-481602760F68}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{23B9224C-9912-4EC0-AECD-2354855BB9B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23B9224C-9912-4EC0-AECD-2354855BB9B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23B9224C-9912-4EC0-AECD-2354855BB9B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23B9224C-9912-4EC0-AECD-2354855BB9B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EED16DA0-2CBD-47D3-8C7D-481602760F68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EED16DA0-2CBD-47D3-8C7D-481602760F68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EED16DA0-2CBD-47D3-8C7D-481602760F68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EED16DA0-2CBD-47D3-8C7D-481602760F68}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {ED21E79E-D572-465D-85A1-652B464CCC59}
+	EndGlobalSection
+EndGlobal
