@@ -12,3 +12,4 @@ C:\Users\Messi\Desktop\AgroCosts\AgroCosts\StorageServiceLibrary\obj\Debug\net8.
 C:\Users\Messi\Desktop\AgroCosts\AgroCosts\StorageServiceLibrary\obj\Debug\net8.0\StorageServiceLibrary.pdb
 C:\Users\Messi\Desktop\AgroCosts\AgroCosts\StorageServiceLibrary\obj\Debug\net8.0\StorageServiceLibrary.genruntimeconfig.cache
 C:\Users\Messi\Desktop\AgroCosts\AgroCosts\StorageServiceLibrary\obj\Debug\net8.0\ref\StorageServiceLibrary.dll
+C:\Users\Messi\Desktop\AgroCosts\AgroCosts\StorageServiceLibrary\obj\Debug\net8.0\StorageServiceLibrary.sourcelink.json
