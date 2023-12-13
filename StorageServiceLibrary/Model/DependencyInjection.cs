@@ -1,10 +1,13 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using StorageServiceLibrary.IRepository;
+using StorageServiceLibrary.Repository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using StorageServiceLibrary.DTO;
 
 namespace StorageServiceLibrary.Model
 {
@@ -13,6 +16,10 @@ namespace StorageServiceLibrary.Model
 
         public static IServiceCollection AddRepository(this IServiceCollection services)
         {
+
+            services.AddTransient<IUnitOfWork, UnitOfWork>();
+
+            services.AddAutoMapper(typeof(MapperInitilizer));
 
             services.AddDbContext<AppDB>(opt => opt
 
