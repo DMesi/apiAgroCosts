@@ -21,6 +21,32 @@ namespace StorageServiceLibrary.Repository
             _dbSet = _context.Set<T>();
         }
 
+        public async Task<IList<T>> customQuery(Expression<Func<T, bool>> expresson = null, Func<IQueryable<T>, IOrderedQueryable<T>> orderBy = null, List<string> includes = null)
+        {
+
+            IQueryable<T> query = _dbSet;
+
+            if (expresson != null)
+            {
+                query = query.Where(expresson);
+
+            }
+            if (includes != null)
+            {
+                foreach (var includePropery in includes)
+                {
+                    query = query.Include(includePropery);
+                }
+            }
+            if (orderBy != null)
+            {
+
+                query = orderBy(query);
+            }
+            return await query.AsNoTracking().ToListAsync();
+
+        }
+
         public async Task Delete(int id)
         {
             //throw new NotImplementedException();

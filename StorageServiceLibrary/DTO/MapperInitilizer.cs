@@ -15,7 +15,9 @@ namespace StorageServiceLibrary.DTO
 
             CreateMap<Field, FieldDTO>().ReverseMap();
             CreateMap<Plan, PlanDTO>().ReverseMap();
-            CreateMap<Seed, SeedDTO>().ReverseMap();
+            CreateMap<Category, CategoryDTO>().ReverseMap();
+            CreateMap<ReproMaterial, ReproMaterialDTO>().ReverseMap();
+           
         }   
     }
 }

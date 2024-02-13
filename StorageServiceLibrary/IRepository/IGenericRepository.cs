@@ -24,6 +24,13 @@ namespace StorageServiceLibrary.IRepository
         Task Delete(int id);
 
 
+        Task<IList<T>> customQuery(
+       Expression<Func<T, bool>> expresson = null,
+       Func<IQueryable<T>, IOrderedQueryable<T>> orderBy = null,
+       List<string> includes = null
+       );
+
+
     }
 
 }

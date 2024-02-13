@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using StorageServiceLibrary.DTO;
+using Microsoft.Extensions.Configuration;
 
 namespace StorageServiceLibrary.Model
 {
@@ -24,9 +25,7 @@ namespace StorageServiceLibrary.Model
             services.AddDbContext<AppDB>(opt => opt
 
                .UseSqlServer("Server=.\\SQLEXPRESS;Database=AgroCostsDB;Trusted_Connection=True;TrustServerCertificate=True;"));
-         //    .UseSqlServer("server=(LocalDb)\\MSSQLLocalDB; database = AgroCostsDB ;Integrated Security=True"));
-
-
+            //    .UseSqlServer("server=(LocalDb)\\MSSQLLocalDB; database = AgroCostsDB ;Integrated Security=True"));
 
             return services;
         }

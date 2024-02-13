@@ -14,7 +14,8 @@ namespace StorageServiceLibrary.Repository
 
         private IGenericRepository<Field> _Fields;
         private IGenericRepository<Plan> _Plans;
-        private IGenericRepository<Seed> _Seeds;
+        private IGenericRepository<Category> _Categories;
+        private IGenericRepository<ReproMaterial> _Repromaterials;
 
         public UnitOfWork(AppDB context)
         {
@@ -25,7 +26,10 @@ namespace StorageServiceLibrary.Repository
 
         public IGenericRepository<Plan> Plans => _Plans ??= new GenericRepositroy<Plan>(_context);
 
-        public IGenericRepository<Seed> Seeds => _Seeds ??= new GenericRepositroy<Seed>(_context);
+
+        public IGenericRepository<ReproMaterial> ReproMaterials => _Repromaterials ??= new GenericRepositroy<ReproMaterial>(_context);
+
+        public IGenericRepository<Category> Categorys => _Categories ??= new GenericRepositroy<Category>(_context);
 
         public void Dispose()
         {

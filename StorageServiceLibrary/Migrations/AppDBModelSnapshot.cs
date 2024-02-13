@@ -24,8 +24,15 @@ namespace StorageServiceLibrary.Migrations
 
             modelBuilder.Entity("StorageServiceLibrary.Model.Field", b =>
                 {
-                    b.Property<string>("Id_Field")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<int>("Id_Field")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id_Field"));
+
+                    b.Property<string>("Field_number")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<double>("Ha")
                         .HasColumnType("float");
@@ -51,7 +58,8 @@ namespace StorageServiceLibrary.Migrations
                     b.HasData(
                         new
                         {
-                            Id_Field = "2494/20",
+                            Id_Field = 1,
+                            Field_number = "2494/20",
                             Ha = 2.0,
                             J = 3.5,
                             Link = "",
@@ -60,7 +68,8 @@ namespace StorageServiceLibrary.Migrations
                         },
                         new
                         {
-                            Id_Field = "7739",
+                            Id_Field = 2,
+                            Field_number = "7739",
                             Ha = 1.5,
                             J = 2.25,
                             Link = "https://a3.geosrbija.rs/share/0dfacc67fca1",
@@ -77,9 +86,8 @@ namespace StorageServiceLibrary.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id_plan"));
 
-                    b.Property<string>("FieldRefId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<int>("FieldRefId")
+                        .HasColumnType("int");
 
                     b.Property<double>("Ha")
                         .HasColumnType("float");
@@ -108,11 +116,31 @@ namespace StorageServiceLibrary.Migrations
                         new
                         {
                             Id_plan = 1,
-                            FieldRefId = "7739",
+                            FieldRefId = 1,
                             Ha = 1.5,
                             J = 2.25,
                             Note = "",
                             SeedRefId = 2,
+                            Year = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id_plan = 2,
+                            FieldRefId = 1,
+                            Ha = 1.5,
+                            J = 2.25,
+                            Note = "",
+                            SeedRefId = 1,
+                            Year = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id_plan = 3,
+                            FieldRefId = 2,
+                            Ha = 1.5,
+                            J = 2.25,
+                            Note = "",
+                            SeedRefId = 1,
                             Year = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         });
                 });

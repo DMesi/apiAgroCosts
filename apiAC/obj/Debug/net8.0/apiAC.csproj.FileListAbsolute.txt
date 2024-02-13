@@ -137,3 +137,14 @@ C:\Users\Messi\Desktop\AgroCosts\AgroCosts\apiAC\bin\Debug\net8.0\tr\Microsoft.C
 C:\Users\Messi\Desktop\AgroCosts\AgroCosts\apiAC\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\Messi\Desktop\AgroCosts\AgroCosts\apiAC\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\Messi\Desktop\AgroCosts\AgroCosts\apiAC\obj\Debug\net8.0\apiAC.sourcelink.json
+C:\Users\Messi\Desktop\AgroCosts\AgroCosts\apiAC\bin\Debug\net8.0\AutoMapper.dll
+C:\Users\Messi\Desktop\AgroCosts\AgroCosts\apiAC\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\Messi\Desktop\AgroCosts\AgroCosts\apiAC\bin\Debug\net8.0\Serilog.dll
+C:\Users\Messi\Desktop\AgroCosts\AgroCosts\apiAC\bin\Debug\net8.0\Serilog.AspNetCore.dll
+C:\Users\Messi\Desktop\AgroCosts\AgroCosts\apiAC\bin\Debug\net8.0\Serilog.Extensions.Hosting.dll
+C:\Users\Messi\Desktop\AgroCosts\AgroCosts\apiAC\bin\Debug\net8.0\Serilog.Extensions.Logging.dll
+C:\Users\Messi\Desktop\AgroCosts\AgroCosts\apiAC\bin\Debug\net8.0\Serilog.Formatting.Compact.dll
+C:\Users\Messi\Desktop\AgroCosts\AgroCosts\apiAC\bin\Debug\net8.0\Serilog.Settings.Configuration.dll
+C:\Users\Messi\Desktop\AgroCosts\AgroCosts\apiAC\bin\Debug\net8.0\Serilog.Sinks.Console.dll
+C:\Users\Messi\Desktop\AgroCosts\AgroCosts\apiAC\bin\Debug\net8.0\Serilog.Sinks.Debug.dll
+C:\Users\Messi\Desktop\AgroCosts\AgroCosts\apiAC\bin\Debug\net8.0\Serilog.Sinks.File.dll

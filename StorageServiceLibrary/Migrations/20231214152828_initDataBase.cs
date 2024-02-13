@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace StorageServiceLibrary.Migrations
 {
     /// <inheritdoc />
-    public partial class initializeDatabase : Migration
+    public partial class initDataBase : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -17,7 +17,9 @@ namespace StorageServiceLibrary.Migrations
                 name: "Fields",
                 columns: table => new
                 {
-                    Id_Field = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    Id_Field = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Field_number = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Ha = table.Column<double>(type: "float", nullable: false),
                     J = table.Column<double>(type: "float", nullable: false),
@@ -50,7 +52,7 @@ namespace StorageServiceLibrary.Migrations
                     Id_plan = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Year = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    FieldRefId = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    FieldRefId = table.Column<int>(type: "int", nullable: false),
                     SeedRefId = table.Column<int>(type: "int", nullable: false),
                     Ha = table.Column<double>(type: "float", nullable: false),
                     J = table.Column<double>(type: "float", nullable: false),
@@ -75,11 +77,11 @@ namespace StorageServiceLibrary.Migrations
 
             migrationBuilder.InsertData(
                 table: "Fields",
-                columns: new[] { "Id_Field", "Ha", "J", "Link", "Name", "Note" },
+                columns: new[] { "Id_Field", "Field_number", "Ha", "J", "Link", "Name", "Note" },
                 values: new object[,]
                 {
-                    { "2494/20", 2.0, 3.5, "", "Kuvajt", "" },
-                    { "7739", 1.5, 2.25, "https://a3.geosrbija.rs/share/0dfacc67fca1", "Kanal", "" }
+                    { 1, "2494/20", 2.0, 3.5, "", "Kuvajt", "" },
+                    { 2, "7739", 1.5, 2.25, "https://a3.geosrbija.rs/share/0dfacc67fca1", "Kanal", "" }
                 });
 
             migrationBuilder.InsertData(
@@ -95,7 +97,12 @@ namespace StorageServiceLibrary.Migrations
             migrationBuilder.InsertData(
                 table: "Plans",
                 columns: new[] { "Id_plan", "FieldRefId", "Ha", "J", "Note", "SeedRefId", "Year" },
-                values: new object[] { 1, "7739", 1.5, 2.25, "", 2, new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) });
+                values: new object[,]
+                {
+                    { 1, 1, 1.5, 2.25, "", 2, new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
+                    { 2, 1, 1.5, 2.25, "", 1, new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
+                    { 3, 2, 1.5, 2.25, "", 1, new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) }
+                });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Plans_FieldRefId",

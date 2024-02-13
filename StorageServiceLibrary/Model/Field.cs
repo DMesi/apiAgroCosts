@@ -12,11 +12,15 @@ namespace StorageServiceLibrary.Model
     {
 
         [Key]
-        public string Id_Field { get; set; }        
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int Id_Field { get; set; }
+        public string Id_User { get; set; }
+        public string Field_number { get; set; } = string.Empty;
         public string Name { get; set; } = string.Empty;
         public double Ha { get; set; }
-        public double J { get; set; }
-        public string Link { get; set; } = string.Empty;
+        public double Ar{ get; set; }
+        public double M { get; set; }
+        public string? Link { get; set; } = string.Empty;
         public string? Note { get; set; } = string.Empty;
 
     }

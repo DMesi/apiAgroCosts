@@ -11,19 +11,17 @@ namespace StorageServiceLibrary.DTO
 {
     public class FieldDTO
     {
-        
-        public int Id_plan { get; set; }
-        public DateTime Year { get; set; }
 
-        public string FieldRefId { get; set; }
-        [ForeignKey("FieldRefId")]
-        public Field Field { get; set; }    // include
 
-        public int SeedRefId { get; set; }
-        [ForeignKey("SeedRefId")]
-        public Seed Seed { get; set; }    // include
+       
+        public int Id_Field { get; set; }
+        public string Id_User { get; set; }
+        public string Field_number { get; set; } = string.Empty;
+        public string Name { get; set; } = string.Empty;
         public double Ha { get; set; }
-        public double J { get; set; }
+        public double Ar { get; set; }
+        public double M { get; set; }
+        public string? Link { get; set; } = string.Empty;
         public string? Note { get; set; } = string.Empty;
 
     }

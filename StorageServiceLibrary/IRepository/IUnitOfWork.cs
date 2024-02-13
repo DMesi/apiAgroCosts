@@ -11,7 +11,10 @@ namespace StorageServiceLibrary.IRepository
     {
         IGenericRepository<Field> Fields { get; }
         IGenericRepository<Plan> Plans { get; }
-        IGenericRepository<Seed> Seeds { get; }
+        IGenericRepository<Category> Categorys { get; }
+        IGenericRepository<ReproMaterial> ReproMaterials { get; }
+      
+
         Task Save();
 
     }
