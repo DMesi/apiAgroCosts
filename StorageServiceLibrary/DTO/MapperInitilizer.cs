@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Identity;
 using StorageServiceLibrary.Model;
 using System;
 using System.Collections.Generic;
@@ -17,7 +18,10 @@ namespace StorageServiceLibrary.DTO
             CreateMap<Plan, PlanDTO>().ReverseMap();
             CreateMap<Category, CategoryDTO>().ReverseMap();
             CreateMap<ReproMaterial, ReproMaterialDTO>().ReverseMap();
-           
-        }   
+            CreateMap<IdentityUser, emDTO>().ReverseMap();
+            CreateMap<ApiUser, UserDTO>().ReverseMap();
+
+
+        }
     }
 }

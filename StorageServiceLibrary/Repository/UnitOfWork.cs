@@ -1,4 +1,5 @@
-﻿using StorageServiceLibrary.IRepository;
+﻿using Microsoft.AspNetCore.Identity;
+using StorageServiceLibrary.IRepository;
 using StorageServiceLibrary.Model;
 using System;
 using System.Collections.Generic;
@@ -16,7 +17,10 @@ namespace StorageServiceLibrary.Repository
         private IGenericRepository<Plan> _Plans;
         private IGenericRepository<Category> _Categories;
         private IGenericRepository<ReproMaterial> _Repromaterials;
+        private IGenericRepository<IdentityUser> _Users;
+        private IGenericRepository<IdentityRole> _Role;
 
+       
         public UnitOfWork(AppDB context)
         {
             _context = context;
@@ -30,6 +34,12 @@ namespace StorageServiceLibrary.Repository
         public IGenericRepository<ReproMaterial> ReproMaterials => _Repromaterials ??= new GenericRepositroy<ReproMaterial>(_context);
 
         public IGenericRepository<Category> Categorys => _Categories ??= new GenericRepositroy<Category>(_context);
+
+        public IGenericRepository<IdentityUser> Users => _Users ??= new GenericRepositroy<IdentityUser>(_context);
+     
+        public IGenericRepository<IdentityRole> Role => _Role ??= new GenericRepositroy<IdentityRole> (_context);
+
+        
 
         public void Dispose()
         {

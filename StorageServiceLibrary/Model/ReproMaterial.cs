@@ -18,7 +18,7 @@ namespace StorageServiceLibrary.Model
         public DateTime Year { get; set; }
 
 
-        public int CategoryRefId { get; set; }
+        public int? CategoryRefId { get; set; }
         [ForeignKey("CategoryRefId")]
         public Category Category { get; set; }
 

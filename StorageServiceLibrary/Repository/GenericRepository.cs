@@ -49,6 +49,7 @@ namespace StorageServiceLibrary.Repository
 
         public async Task Delete(int id)
         {
+            
             //throw new NotImplementedException();
 
             var entity = await _dbSet.FindAsync(id);
@@ -79,6 +80,9 @@ namespace StorageServiceLibrary.Repository
             //throw new NotImplementedException();
 
             IQueryable<T> query = _dbSet;
+
+
+            
 
             if (expresson != null)
             {

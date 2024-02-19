@@ -20,13 +20,15 @@ namespace StorageServiceLibrary.Model
         [ForeignKey("FieldRefId")]
         public Field Field { get; set; }    // include
 
+        public int? ReproMaterialRefId { get; set; }
+        [ForeignKey("ReproMaterialRefId")]
+        public ReproMaterial ReproMaterial { get; set; }    // include
+
         public int CategoryRefId { get; set; }
         [ForeignKey("CategoryRefId")]
         public Category Category { get; set; }    // include
 
-        public int ReproMaterialRefId { get; set; }
-        [ForeignKey("ReproMaterialRefId")]
-        public ReproMaterial ReproMaterial { get; set; }    // include
+ 
        
         public double Ha { get; set; }
         public double Ar { get; set; }

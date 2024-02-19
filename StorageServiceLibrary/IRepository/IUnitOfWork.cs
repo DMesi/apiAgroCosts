@@ -1,4 +1,5 @@
-﻿using StorageServiceLibrary.Model;
+﻿using Microsoft.AspNetCore.Identity;
+using StorageServiceLibrary.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,7 +14,10 @@ namespace StorageServiceLibrary.IRepository
         IGenericRepository<Plan> Plans { get; }
         IGenericRepository<Category> Categorys { get; }
         IGenericRepository<ReproMaterial> ReproMaterials { get; }
-      
+
+        IGenericRepository<IdentityUser> Users { get; } 
+
+        IGenericRepository<IdentityRole> Role { get; }
 
         Task Save();
 

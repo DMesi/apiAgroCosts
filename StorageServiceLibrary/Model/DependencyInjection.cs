@@ -9,6 +9,8 @@ using System.Text;
 using System.Threading.Tasks;
 using StorageServiceLibrary.DTO;
 using Microsoft.Extensions.Configuration;
+using StorageServiceLibrary.Services;
+using Microsoft.AspNetCore.Identity;
 
 namespace StorageServiceLibrary.Model
 {
@@ -19,6 +21,9 @@ namespace StorageServiceLibrary.Model
         {
 
             services.AddTransient<IUnitOfWork, UnitOfWork>();
+           
+            // mmust be Scoped
+            services.AddScoped<IAuthManager, AuthManager>();
 
             services.AddAutoMapper(typeof(MapperInitilizer));
 
@@ -26,6 +31,27 @@ namespace StorageServiceLibrary.Model
 
                .UseSqlServer("Server=.\\SQLEXPRESS;Database=AgroCostsDB;Trusted_Connection=True;TrustServerCertificate=True;"));
             //    .UseSqlServer("server=(LocalDb)\\MSSQLLocalDB; database = AgroCostsDB ;Integrated Security=True"));
+
+
+
+            services.AddAuthentication();
+
+            //  ServiceExtensions.cs
+            // services.ConfigureIdentity();
+
+            //services.AddSwaggerGen(options => {
+            //    options.SwaggerDoc("v1", new OpenApiInfo
+            //    {
+            //        Title = "WEB APIxxx",
+            //        Version = "v1"
+            //    });
+            //});
+
+            ////Enable CORS
+            //services.AddCors(c => {
+            //    c.AddPolicy("AllowOrigin", options => options.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+            //});
+
 
             return services;
         }

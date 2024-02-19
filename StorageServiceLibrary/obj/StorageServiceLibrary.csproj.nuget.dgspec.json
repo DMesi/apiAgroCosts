@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Messi\\Desktop\\AgroCosts\\AgroCosts\\StorageServiceLibrary\\StorageServiceLibrary.csproj": {}
+    "C:\\Users\\Messi\\Desktop\\AgroCosts\\API\\StorageServiceLibrary\\StorageServiceLibrary.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Messi\\Desktop\\AgroCosts\\AgroCosts\\StorageServiceLibrary\\StorageServiceLibrary.csproj": {
+    "C:\\Users\\Messi\\Desktop\\AgroCosts\\API\\StorageServiceLibrary\\StorageServiceLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Messi\\Desktop\\AgroCosts\\AgroCosts\\StorageServiceLibrary\\StorageServiceLibrary.csproj",
+        "projectUniqueName": "C:\\Users\\Messi\\Desktop\\AgroCosts\\API\\StorageServiceLibrary\\StorageServiceLibrary.csproj",
         "projectName": "StorageServiceLibrary",
-        "projectPath": "C:\\Users\\Messi\\Desktop\\AgroCosts\\AgroCosts\\StorageServiceLibrary\\StorageServiceLibrary.csproj",
+        "projectPath": "C:\\Users\\Messi\\Desktop\\AgroCosts\\API\\StorageServiceLibrary\\StorageServiceLibrary.csproj",
         "packagesPath": "C:\\Users\\Messi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Messi\\Desktop\\AgroCosts\\AgroCosts\\StorageServiceLibrary\\obj\\",
+        "outputPath": "C:\\Users\\Messi\\Desktop\\AgroCosts\\API\\StorageServiceLibrary\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -48,7 +48,25 @@
               "target": "Package",
               "version": "[12.0.1, )"
             },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
             "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.InMemory": {
               "target": "Package",
               "version": "[8.0.0, )"
             },

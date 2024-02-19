@@ -17,14 +17,19 @@ namespace StorageServiceLibrary.Model
 
                 new IdentityRole
                 {
-                    Name = "User1",
-                    NormalizedName = "USER1"
+                    Name = "User",
+                    NormalizedName = "USER"
                 },
                 new IdentityRole
                 {
-                    Name = "Administrator1",
-                    NormalizedName = "ADMINISTRATOR1"
-                }
+                    Name = "Administrator",
+                    NormalizedName = "ADMINISTRATOR"
+                },
+                 new IdentityRole
+                 {
+                     Name = "SuperAdmin",
+                     NormalizedName = "SUPERADMIN"
+                 }
                 );
         }
 
